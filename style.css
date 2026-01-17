@@ -1252,7 +1252,11 @@ button {
         min-height: 220px;
         padding: 24px;
         text-align: left !important;
-        background-position: calc(100% + 50px) center;
+        /* Cor de fundo para complementar a imagem */
+        background-color: #9DBA57;
+        background-image: url('assets/images/banner-frete.png');
+        background-position: right center;
+        /* Volta ao normal, mas com cover */
         background-size: cover;
     }
 
