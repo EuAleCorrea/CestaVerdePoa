@@ -208,13 +208,13 @@ button {
 
 @media (max-width: 768px) {
     .logo-img {
-        height: 45px;
+        height: 55px;
     }
 }
 
 @media (max-width: 480px) {
     .logo-img {
-        height: 35px;
+        height: 45px;
     }
 }
 
@@ -669,12 +669,26 @@ button {
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-sm);
+    flex-wrap: nowrap;
 }
 
 .section-title {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--texto);
+    white-space: nowrap;
+}
+
+.ver-todos {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.2rem;
+    }
 }
 
 .ver-todos {
