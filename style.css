@@ -132,6 +132,17 @@ button {
     object-fit: cover;
 }
 
+@media (max-width: 768px) {
+    .carousel-container {
+        min-height: 250px;
+    }
+
+    .carousel-slide img {
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
 .carousel-dots {
     position: absolute;
     bottom: 20px;
@@ -192,6 +203,19 @@ button {
     height: 100px;
     /* Logo reduzido */
     width: auto;
+    transition: height 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 50px;
+    }
 }
 
 /* Placeholder para logo quando imagem não carrega */
@@ -736,6 +760,7 @@ button {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
