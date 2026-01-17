@@ -1249,15 +1249,13 @@ button {
         align-items: flex-start !important;
         justify-content: center !important;
         height: auto;
-        min-height: 220px;
+        min-height: 160px;
         padding: 24px;
         text-align: left !important;
-        /* Cor de fundo para complementar a imagem */
+        /* Em mobile: apenas fundo verde sólido, sem a imagem */
+        background-image: none !important;
         background-color: #9DBA57;
-        background-image: url('assets/images/banner-frete.png');
-        background-position: right center;
-        /* Volta ao normal, mas com cover */
-        background-size: cover;
+        border-radius: 16px;
     }
 
     .shipping-title,
@@ -1265,7 +1263,7 @@ button {
     .shipping-check {
         margin-bottom: 8px;
         text-align: left !important;
-        max-width: 55%;
+        max-width: 100%;
         width: 100%;
     }
 
