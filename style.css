@@ -1246,18 +1246,33 @@ button {
 @media (max-width: 768px) {
     .shipping-content {
         flex-direction: column;
+        align-items: flex-start;
         height: auto;
-        padding: 20px;
-        text-align: center;
+        min-height: 200px;
+        padding: 24px;
+        text-align: left;
         background-position: right center;
-        /* Keep bike visible if possible */
+        background-size: auto 100%;
+        /* Keep bike visible on the right */
     }
 
     .shipping-title,
     .shipping-info,
     .shipping-check {
-        margin-bottom: 10px;
-        text-align: center;
+        margin-bottom: 12px;
+        text-align: left;
+        max-width: 60%;
+    }
+
+    .shipping-title h2 {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .shipping-info p,
+    .shipping-check p {
+        font-size: 0.9rem;
+        line-height: 1.3;
     }
 }
 
