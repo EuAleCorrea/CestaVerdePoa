@@ -1,0 +1,8 @@
+.git
+.gitignore
+.cursorrules
+.wrangler
+*.zip
+*.md
+Dockerfile
+.dockerignore

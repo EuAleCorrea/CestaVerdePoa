@@ -1,0 +1,15 @@
+{
+  "name": "cestaverdepoa",
+  "version": "1.0.0",
+  "description": "Cesta Verde POA Frontend",
+  "scripts": {
+    "start": "serve . -l 8000",
+    "dev": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
