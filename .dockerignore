@@ -1,8 +1,21 @@
-.git
-.gitignore
+node_modules/
+.env
+.env.*
+.agent/
+.vscode/
+package-lock.json
+
+# Versão Premium (não vai para produção ainda)
+style-premium.css
+input-premium.css
+index-premium.html
+script-premium.js
+tailwind.config.js
+postcss.config.js
+
+# Arquivos que não precisam ir para o container
+nixpacks.toml
+docs/
+scripts/
+cestaverdepoa-hostinger.zip
 .cursorrules
-.wrangler
-*.zip
-*.md
-Dockerfile
-.dockerignore
