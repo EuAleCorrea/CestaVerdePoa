@@ -246,3 +246,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log('ðŸŒ¿ Bendita Horta - Site carregado com sucesso!');
 });
+
+/* ===========================================
+   EXPANSÃO DE SEÇÕES (Ver Todos / Ver Menos)
+   =========================================== */
+document.addEventListener('DOMContentLoaded', function() {
+    const verTodosBtns = document.querySelectorAll('.ver-todos');
+    
+    verTodosBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('data-target');
+            if(!targetId) return;
+            
+            const grid = document.getElementById(targetId);
+            if(!grid) return;
+            
+            const isExpanded = grid.classList.contains('expanded');
+            
+            if(isExpanded) {
+                grid.classList.remove('expanded');
+                this.textContent = 'Ver Todos';
+                
+                const gridTop = grid.parentElement.getBoundingClientRect().top + window.scrollY - 100;
+                window.scrollTo({
+                    top: gridTop,
+                    behavior: 'smooth'
+                });
+            } else {
+                grid.classList.add('expanded');
+                this.textContent = 'Ver Menos';
+            }
+        });
+    });
+});
+

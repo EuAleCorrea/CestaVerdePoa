@@ -89,18 +89,6 @@
             <div class="diferencial">
                 <div class="diferencial-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                        <line x1="1" y1="10" x2="23" y2="10"></line>
-                    </svg>
-                </div>
-                <div class="diferencial-text">
-                    <strong>Pague com Pix</strong>
-                    <span>5% de desconto</span>
-                </div>
-            </div>
-            <div class="diferencial">
-                <div class="diferencial-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="10"></circle>
                         <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
@@ -108,18 +96,6 @@
                 <div class="diferencial-text">
                     <strong>Entrega Rápida</strong>
                     <span>Em até 24h</span>
-                </div>
-            </div>
-            <div class="diferencial">
-                <div class="diferencial-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                        <line x1="1" y1="10" x2="23" y2="10"></line>
-                    </svg>
-                </div>
-                <div class="diferencial-text">
-                    <strong>Cartão de Crédito</strong>
-                    <span>Até 3x sem juros</span>
                 </div>
             </div>
             <div class="diferencial">
@@ -142,56 +118,44 @@
         <div class="section-container">
             <div class="section-header">
                 <h2 class="section-title">Mais Vendidos</h2>
-                <a href="#" class="ver-todos">Ver Todos</a>
+                <a href="#" class="ver-todos" id="btn-mais-vendidos" data-target="grid-mais-vendidos" style="display: none;">Ver Todos</a>
             </div>
-            <div class="produtos-grid">
+            <div class="produtos-grid" id="grid-mais-vendidos">
                 <article class="produto-card">
                     <span class="tag-destaque">Destaque</span>
                     <div class="produto-img">
-                        <img src="assets/images/produto-1.jpg" alt="Cesta de Orgânicos Orgânico certificado" loading="lazy" decoding="async">
+                        <img src="assets/Mais vendidos/alface-americana-fresca.jpg" alt="Alface Americana Fresca Orgânica" loading="lazy" decoding="async">
                     </div>
                     <div class="produto-info">
-                        <h3 class="produto-nome">Cesta de Orgânicos Grande</h3>
-                        <div class="produto-preco">
-                            <span class="preco-atual">R$ 89,90</span>
-                        </div>
+                        <h3 class="produto-nome">Alface Americana Fresca</h3>
                         <button class="btn-comprar">Adicionar</button>
                     </div>
                 </article>
                 <article class="produto-card">
                     <div class="produto-img">
-                        <img src="assets/images/produto-2.jpg" alt="Mix de Folhas Orgânico certificado" loading="lazy" decoding="async">
+                        <img src="assets/Mais vendidos/alface-crespa-fresca.png" alt="Alface Crespa Orgânica" loading="lazy" decoding="async">
                     </div>
                     <div class="produto-info">
-                        <h3 class="produto-nome">Mix de Folhas Orgânicas 200g</h3>
-                        <div class="produto-preco">
-                            <span class="preco-atual">R$ 12,90</span>
-                        </div>
+                        <h3 class="produto-nome">Alface Crespa Orgânica</h3>
                         <button class="btn-comprar">Adicionar</button>
                     </div>
                 </article>
                 <article class="produto-card">
-                    <span class="tag-novidade">Novidade</span>
+                    <span class="tag-novidade">Top 1</span>
                     <div class="produto-img">
-                        <img src="assets/images/produto-3.jpg" alt="Suco Verde Orgânico certificado" loading="lazy" decoding="async">
+                        <img src="assets/Mais vendidos/rucula-fresca-organica.jpg" alt="Rúcula Fresca Orgânica" loading="lazy" decoding="async">
                     </div>
                     <div class="produto-info">
-                        <h3 class="produto-nome">Suco Verde Detox 500ml</h3>
-                        <div class="produto-preco">
-                            <span class="preco-atual">R$ 18,90</span>
-                        </div>
+                        <h3 class="produto-nome">Rúcula Fresca Orgânica</h3>
                         <button class="btn-comprar">Adicionar</button>
                     </div>
                 </article>
                 <article class="produto-card">
                     <div class="produto-img">
-                        <img src="assets/images/produto-4.jpg" alt="Ovos Orgânicos Orgânico certificado" loading="lazy" decoding="async">
+                        <img src="assets/Mais vendidos/mamao-formosa-selecionado.png" alt="Mamão Formosa Selecionado Valle Frutas" loading="lazy" decoding="async">
                     </div>
                     <div class="produto-info">
-                        <h3 class="produto-nome">Ovos Orgânicos Caipira 12un</h3>
-                        <div class="produto-preco">
-                            <span class="preco-atual">R$ 24,90</span>
-                        </div>
+                        <h3 class="produto-nome">Mamão Formosa Selecionado</h3>
                         <button class="btn-comprar">Adicionar</button>
                     </div>
                 </article>
@@ -226,58 +190,146 @@
         <div class="section-container">
             <div class="section-header">
                 <h2 class="section-title">Novidades</h2>
-                <a href="#" class="ver-todos">Ver Todos</a>
+                <a href="#" class="ver-todos" id="btn-novidades" data-target="grid-novidades">Ver Todos</a>
             </div>
-            <div class="produtos-grid">
+            <div class="produtos-grid" id="grid-novidades">
                 <article class="produto-card">
                     <span class="tag-novidade">Novidade</span>
                     <div class="produto-img">
-                        <img src="assets/images/produto-5.jpg" alt="Granola Artesanal Orgânico certificado" loading="lazy" decoding="async">
+                        <img src="assets/news/polenta-instantanea-paganini-500g.webp" alt="Polenta Instantânea Paganini 500g" loading="lazy" decoding="async">
                     </div>
                     <div class="produto-info">
-                        <h3 class="produto-nome">Granola Artesanal 500g</h3>
-                        <div class="produto-preco">
-                            <span class="preco-atual">R$ 29,90</span>
-                        </div>
+                        <h3 class="produto-nome">Polenta Instantânea Paganini 500g</h3>
                         <button class="btn-comprar">Adicionar</button>
                     </div>
                 </article>
                 <article class="produto-card">
                     <span class="tag-novidade">Novidade</span>
                     <div class="produto-img">
-                        <img src="assets/images/produto-6.jpg" alt="Mel Orgânico Orgânico certificado" loading="lazy" decoding="async">
+                        <img src="assets/news/creme-aceto-balsamico-paganini.webp" alt="Creme Aceto Balsâmico Paganini" loading="lazy" decoding="async">
                     </div>
                     <div class="produto-info">
-                        <h3 class="produto-nome">Mel Orgânico Silvestre 300g</h3>
-                        <div class="produto-preco">
-                            <span class="preco-atual">R$ 34,90</span>
-                        </div>
+                        <h3 class="produto-nome">Creme Aceto Balsâmico Paganini</h3>
                         <button class="btn-comprar">Adicionar</button>
                     </div>
                 </article>
                 <article class="produto-card">
                     <span class="tag-novidade">Novidade</span>
                     <div class="produto-img">
-                        <img src="assets/images/produto-7.jpg" alt="Castanhas Mix Orgânico certificado" loading="lazy" decoding="async">
+                        <img src="assets/news/geleia-artesanal-maracuja.jpeg" alt="Geleia Artesanal de Maracujá" loading="lazy" decoding="async">
                     </div>
                     <div class="produto-info">
-                        <h3 class="produto-nome">Mix de Castanhas Premium 200g</h3>
-                        <div class="produto-preco">
-                            <span class="preco-atual">R$ 42,90</span>
-                        </div>
+                        <h3 class="produto-nome">Geleia Artesanal de Maracujá</h3>
                         <button class="btn-comprar">Adicionar</button>
                     </div>
                 </article>
                 <article class="produto-card">
                     <span class="tag-novidade">Novidade</span>
                     <div class="produto-img">
-                        <img src="assets/images/produto-8.jpg" alt="Açaí Puro Orgânico certificado" loading="lazy" decoding="async">
+                        <img src="assets/news/geleia-artesanal-cebola-caramelizada.jpeg" alt="Geleia Artesanal de Cebola Caramelizada" loading="lazy" decoding="async">
                     </div>
                     <div class="produto-info">
-                        <h3 class="produto-nome">Açaí Puro Congelado 500g</h3>
-                        <div class="produto-preco">
-                            <span class="preco-atual">R$ 26,90</span>
-                        </div>
+                        <h3 class="produto-nome">Geleia Artesanal de Cebola Caramelada</h3>
+                        <button class="btn-comprar">Adicionar</button>
+                    </div>
+                </article>
+
+                <article class="produto-card hidden-product">
+                    <div class="produto-img">
+                        <img src="assets/news/geleia-cebola-caramelizada-premium.jpeg" alt="Geleia Cebola Caramelizada Premium" loading="lazy" decoding="async">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Geleia Cebola Caramelizada Premium</h3>
+                        <button class="btn-comprar">Adicionar</button>
+                    </div>
+                </article>
+                <article class="produto-card hidden-product">
+                    <div class="produto-img">
+                        <img src="assets/news/geleia-artesanal-abacaxi.jpeg" alt="Geleia Artesanal de Abacaxi" loading="lazy" decoding="async">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Geleia Artesanal de Abacaxi</h3>
+                        <button class="btn-comprar">Adicionar</button>
+                    </div>
+                </article>
+                <article class="produto-card hidden-product">
+                    <div class="produto-img">
+                        <img src="assets/news/geleia-artesanal-frutas-negras.jpeg" alt="Geleia Artesanal Frutas Negras" loading="lazy" decoding="async">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Geleia Artesanal Frutas Negras</h3>
+                        <button class="btn-comprar">Adicionar</button>
+                    </div>
+                </article>
+                <article class="produto-card hidden-product">
+                    <div class="produto-img">
+                        <img src="assets/news/geleia-artesanal-morango.jpeg" alt="Geleia Artesanal Morango" loading="lazy" decoding="async">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Geleia Artesanal Morango</h3>
+                        <button class="btn-comprar">Adicionar</button>
+                    </div>
+                </article>
+                <article class="produto-card hidden-product">
+                    <div class="produto-img">
+                        <img src="assets/news/geleia-artesanal-frutas-vermelhas.jpeg" alt="Geleia Artesanal Frutas Vermelhas" loading="lazy" decoding="async">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Geleia Artesanal Fr. Vermelhas</h3>
+                        <button class="btn-comprar">Adicionar</button>
+                    </div>
+                </article>
+                <article class="produto-card hidden-product">
+                    <div class="produto-img">
+                        <img src="assets/news/geleia-abacaxi-caseira.jpeg" alt="Geleia Abacaxi Caseira" loading="lazy" decoding="async">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Geleia Abacaxi Caseira</h3>
+                        <button class="btn-comprar">Adicionar</button>
+                    </div>
+                </article>
+                <article class="produto-card hidden-product">
+                    <div class="produto-img">
+                        <img src="assets/news/geleia-maracuja-caseira.jpeg" alt="Geleia Maracujá Caseira" loading="lazy" decoding="async">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Geleia Maracujá Caseira</h3>
+                        <button class="btn-comprar">Adicionar</button>
+                    </div>
+                </article>
+                <article class="produto-card hidden-product">
+                    <div class="produto-img">
+                        <img src="assets/news/geleia-morango-caseira.jpeg" alt="Geleia Morango Caseira" loading="lazy" decoding="async">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Geleia Morango Caseira</h3>
+                        <button class="btn-comprar">Adicionar</button>
+                    </div>
+                </article>
+                <article class="produto-card hidden-product">
+                    <div class="produto-img">
+                        <img src="assets/news/geleia-artesanal-pimenta.jpeg" alt="Geleia Artesanal Pimenta" loading="lazy" decoding="async">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Geleia Artesanal Pimenta</h3>
+                        <button class="btn-comprar">Adicionar</button>
+                    </div>
+                </article>
+                <article class="produto-card hidden-product">
+                    <div class="produto-img">
+                        <img src="assets/news/geleia-artesanal-manga.jpeg" alt="Geleia Artesanal Manga" loading="lazy" decoding="async">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Geleia Artesanal Manga</h3>
+                        <button class="btn-comprar">Adicionar</button>
+                    </div>
+                </article>
+                <article class="produto-card hidden-product">
+                    <div class="produto-img">
+                        <img src="assets/news/nhoque-de-batata-paganini-500g.jpeg" alt="Nhoque de Batata Paganini 500g" loading="lazy" decoding="async">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Nhoque de Batata Paganini 500g</h3>
                         <button class="btn-comprar">Adicionar</button>
                     </div>
                 </article>
@@ -312,7 +364,7 @@
                 <h2>Frete<br>Grátis</h2>
             </div>
             <div class="shipping-info">
-                <p>Garanta a partir<br>de 200 reais em<br>compras.</p>
+                <p>Garanta a partir<br>de 150 reais em<br>compras.</p>
             </div>
             <div class="shipping-check">
                 <p>Verifique a<br>disponibilidade<br>no seu bairro.</p>
