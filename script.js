@@ -199,9 +199,16 @@ document.addEventListener('DOMContentLoaded', function () {
     let cartItems = 0;
 
     document.querySelectorAll('.btn-comprar').forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (event) => {
             cartItems++;
-            cartCount.textContent = cartItems;
+
+            if (cartCount) {
+                cartCount.textContent = cartItems;
+                cartCount.style.transform = 'scale(1.3)';
+                setTimeout(() => {
+                    cartCount.style.transform = 'scale(1)';
+                }, 200);
+            }
 
             // Animação do botão
             btn.textContent = 'Adicionado!';
@@ -212,11 +219,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 btn.style.background = '';
             }, 1500);
 
-            // Animação do carrinho
-            cartCount.style.transform = 'scale(1.3)';
-            setTimeout(() => {
-                cartCount.style.transform = 'scale(1)';
-            }, 200);
+            // Abre WhatsApp
+            openWhatsApp(event);
         });
     });
 
@@ -248,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* ===========================================
-   EXPANS�O DE SE��ES (Ver Todos / Ver Menos)
+   EXPANS�O DE SE��ES (Ver Todos / Ver Menos)
    =========================================== */
 document.addEventListener('DOMContentLoaded', function() {
     const verTodosBtns = document.querySelectorAll('.ver-todos');
@@ -281,3 +285,69 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+/* ===========================================
+   FAQ ACCORDION (Sanfona)
+   =========================================== */
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (!question) return;
+
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all other items (single-open behavior)
+            faqItems.forEach(other => {
+                other.classList.remove('active');
+                const btn = other.querySelector('.faq-question');
+                if (btn) btn.setAttribute('aria-expanded', 'false');
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+});
+
+/* ===========================================
+   WHATSAPP INTEGRATION
+   =========================================== */
+function openWhatsApp(event) {
+    if (event) {
+        event.preventDefault();
+    }
+    
+    const phone = '5551989707036';
+    let productName = '';
+    
+    if (event && event.target && event.target.classList.contains('btn-comprar')) {
+        const productCard = event.target.closest('.produto-card');
+        if (productCard) {
+            const h3 = productCard.querySelector('h3');
+            if (h3) productName = h3.textContent;
+        }
+    }
+    
+    let text = 'Olá, gostaria de mais informações.';
+    if (productName) {
+        text = 'Olá, gostaria de mais detalhes sobre o produto: *' + productName + '*.';
+    }
+    
+    const message = encodeURIComponent(text);
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    let url = '';
+    
+    if (isMobile) {
+        url = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + message;
+    } else {
+        url = 'https://web.whatsapp.com/send?phone=' + phone + '&text=' + message;
+    }
+    
+    window.open(url, '_blank');
+}
