@@ -2,12 +2,17 @@ providers = ["node"]
 
 [variables]
 NODE_VERSION = "20"
+NIXPACKS_PROVIDERS = "node"
 
 [phases.install]
-cmds = ["npm install"]
+cmds = ["npm ci"]
 
 [phases.build]
-cmds = []
+cmds = [
+    "npm run build",
+    "cp -r .next/static .next/standalone/.next/static",
+    "cp -r public .next/standalone/public"
+]
 
 [start]
-cmd = "npm start"
+cmd = "node .next/standalone/server.js"
