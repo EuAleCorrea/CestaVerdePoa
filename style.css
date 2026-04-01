@@ -819,6 +819,13 @@ button {
    =========================================== */
 .banner-promo {
     padding: var(--spacing-lg) 0;
+    scroll-margin-top: 140px; /* Compensação para o header fixo */
+}
+
+@media (max-width: 768px) {
+    .banner-promo {
+        scroll-margin-top: 80px;
+    }
 }
 
 .banner-container {
