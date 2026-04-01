@@ -1,1 +1,13 @@
 Sempre faça sincronismo com git e compilação no cloudflare após alterações
+
+## 🔀 Git & Branch (OBRIGATÓRIO)
+- **Branch Atual:** `main`
+- **Remote:** `CestaVerdePoa` → https://github.com/EuAleCorrea/CestaVerdePoa.git
+- **Antes de qualquer commit:** rodar `git branch --show-current` para confirmar
+- **Ao criar nova branch:** atualizar este arquivo E o `CONTRIBUTING.md`
+
+## 📌 Convenções
+- Sempre conversar em Português do Brasil
+- Código usa CSS puro (sem Tailwind no site estático)
+- WhatsApp: 5551989707036
+- Servidor dev: `npx serve . -l 8000`

@@ -56,3 +56,14 @@ Considerando a base V1 ("Safe Harbor") já validada pelo cliente:
 
 ---
 *Status: Aguardando revisão inicial do Cliente (V1)*
+
+## 7. Controle de Versionamento (Git)
+
+| Informação       | Valor                                               |
+|------------------|-----------------------------------------------------|
+| **Branch Atual** | `main`                                              |
+| **Remote**       | `CestaVerdePoa`                                     |
+| **Repositório**  | https://github.com/EuAleCorrea/CestaVerdePoa.git   |
+
+> ⚠️ **Para LLMs:** Sempre confirme a branch com `git branch --show-current` antes de operar.
+> Consulte `CONTRIBUTING.md` na raiz para regras completas de commit e push.
