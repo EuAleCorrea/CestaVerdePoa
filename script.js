@@ -316,6 +316,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /* ===========================================
+   INSTAGRAM FEED - Carregamento Dinâmico
+   =========================================== */
+(function loadInstagramFeed() {
+    fetch('posts.json')
+        .then(function (res) {
+            if (!res.ok) throw new Error('posts.json não encontrado');
+            return res.json();
+        })
+        .then(function (posts) {
+            var cards = document.querySelectorAll('.insta-card');
+            posts.slice(0, 5).forEach(function (post, i) {
+                if (cards[i]) {
+                    cards[i].innerHTML =
+                        '<a href="' + post.url + '" target="_blank" rel="noopener noreferrer">' +
+                        '<img src="' + post.localImage + '" alt="Instagram @cestaverdepoa" loading="lazy">' +
+                        '</a>';
+                    cards[i].classList.add('loaded');
+                }
+            });
+        })
+        .catch(function () {
+            // Mantém placeholders cinzas se posts.json não existir
+        });
+})();
+
+/* ===========================================
    WHATSAPP INTEGRATION
    =========================================== */
 function openWhatsApp(event) {

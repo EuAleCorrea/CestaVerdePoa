@@ -1,4 +1,6 @@
+config.php
 node_modules/
+.next/
 .env
 .env.*
 .agent/
@@ -7,4 +9,17 @@ package-lock.json
 style-premium.css
 input-premium.css
 index-premium.html
-/assets/
+script-premium.js
+tailwind.config.js
+next-env.d.ts
+tsconfig.json
+postcss.config.js
+next.config.ts
+Dockerfile
+Deploy_Hostinger/
+sync_log.txt
+posts.json
+assets/images/instagram/
+/app/
+/components/
+/instagram/

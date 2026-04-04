@@ -1169,6 +1169,36 @@ button {
     transform: translateY(-2px);
 }
 
+.insta-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.insta-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.insta-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.85);
+}
+
+/* Esconder ícone placeholder quando tem imagem */
+.insta-card.loaded::after {
+    display: none;
+}
+
+.insta-card.loaded {
+    background-color: transparent;
+}
+
 /* ===========================================
    BANNER FRETE GRÁTIS
    =========================================== */
